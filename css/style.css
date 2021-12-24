@@ -27,6 +27,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -59,9 +61,12 @@ img {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -73,6 +78,11 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+.header-logo {
+  margin-right: 93px;
+}
+
 .logo-dark {
   color: black;
 }
@@ -83,13 +93,25 @@ img {
 
 /* Site nav */
 
+.site-nav-list {
+  display: flex;
+}
+
+.site-nav-item:not(last-child) {
+  margin-right: 50px;
+}
+
 .site-nav-list .link {
   color: var(--second-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
 }
+
 .site-nav-list .link:hover,
 .site-nav-list .link:focus {
   color: var(--accent-color);
@@ -99,6 +121,15 @@ img {
 }
 
 /* Contacts list */
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-item {
+  margin-left: 50px;
+}
 
 .contacts-list .link {
   color: var(--main-text-color);
@@ -116,6 +147,7 @@ img {
   background-color: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -126,6 +158,9 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+  width: 696px;
 }
 .hero-button {
   color: var(--white);
@@ -134,11 +169,13 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  margin-top: 30px;
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -148,6 +185,11 @@ img {
 
 /* Features */
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features-list-title {
   color: var(--second-text-color);
   font-weight: 700;
@@ -155,6 +197,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .features-list-text {
   color: var(--main-text-color);
@@ -164,6 +207,12 @@ img {
   letter-spacing: 0.03em;
 }
 /* About-us */
+
+.about-us {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+
 .about-us-title,
 .team-title {
   color: var(--second-text-color);
@@ -172,6 +221,7 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 
 /* Team */
@@ -239,6 +289,8 @@ img {
 /* Footer */
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-address {
@@ -247,6 +299,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-top: 20px;
 }
 
 .footer-mail,
