@@ -173,6 +173,7 @@ img {
   margin-top: 30px;
   min-width: 200px;
   min-height: 50px;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -196,7 +197,7 @@ img {
 }
 
 .features-list-item {
-  width: calc(100% / 4 - 30px);
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
 
@@ -263,7 +264,7 @@ img {
 }
 
 .team-item {
-  width: calc(100% / 4 - 30px);
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -289,6 +290,17 @@ img {
 
 /* Portfolio */
 
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-list-item:not(last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
   color: var(--second-text-color);
   background-color: #f5f4fa;
@@ -299,6 +311,9 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px 6px 22px;
 }
 
 .filter-button:hover,
@@ -312,12 +327,32 @@ img {
   background-color: var(--accent-color);
 }
 
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.card-set-item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.portfolio-card-content {
+  padding: 20px 24px 20px 24px;
+}
+
 .card-set-item-title {
   color: var(--second-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .card-set-item-text {
@@ -325,6 +360,7 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  margin-bottom: 0px;
 }
 
 /* Footer */
@@ -340,6 +376,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  display: inline-block;
   margin-top: 20px;
   margin-bottom: 9px;
   max-width: 231px;
@@ -352,6 +389,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  display: inline-block;
   max-width: 231px;
 }
 
