@@ -58,8 +58,6 @@ img {
 /* Header */
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -96,7 +94,7 @@ img {
   display: flex;
 }
 
-.site-nav-item:not(last-child) {
+.site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -126,7 +124,7 @@ img {
   margin-left: auto;
 }
 
-.contact-item {
+.contact-item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -192,7 +190,6 @@ img {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
   margin-left: -30px;
 }
 
@@ -221,7 +218,6 @@ img {
 
 .about-us {
   padding-top: 0px;
-  padding-bottom: 94px;
 }
 
 .about-us-list {
@@ -264,6 +260,7 @@ img {
 }
 
 .team-item {
+  background-color: var(--white);
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -278,6 +275,7 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 .team-item-text {
@@ -297,7 +295,7 @@ img {
   margin-bottom: 50px;
 }
 
-.filter-list-item:not(last-child) {
+.filter-list-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -338,12 +336,13 @@ img {
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
 }
 
 .portfolio-card-content {
   padding: 20px 24px 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .card-set-item-title {
@@ -370,16 +369,16 @@ img {
   padding-bottom: 60px;
 }
 
+.address {
+  margin-top: 20px;
+}
+
 .footer-address {
   color: var(--white);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 9px;
-  max-width: 231px;
 }
 
 .footer-mail,
@@ -389,10 +388,8 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  display: inline-block;
-  max-width: 231px;
 }
 
-.footer-mail-margin {
+.footer-contacts-item:not(:last-child) {
   margin-bottom: 9px;
 }
